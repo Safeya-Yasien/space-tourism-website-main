@@ -1,0 +1,118 @@
+header {
+  height: 138px;
+  padding-top: var(--header-padding-top);
+  justify-content: space-between;
+
+  .header__logo {
+    gap: 64px;
+    padding-left: 64px;
+
+    .header__line {
+      height: 1px;
+      width: 560px;
+      background-color: #979797;
+      opacity: 25%;
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  .primary-nav {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+    flex: 1;
+
+    .primary-nav__list {
+      gap: 48px;
+      justify-content: right;
+      padding-inline: 64px;
+
+      .primary-nav__item {
+        font-family: var(--font-barlowCondensed);
+        color: var(--white-color);
+        height: 96px;
+        gap: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        .primary-nav__number {
+          font-weight: bold;
+          letter-spacing: 2.7px;
+          font-size: 16px;
+        }
+      }
+
+      .primary-nav__item--active {
+        border-bottom: 3px solid var(--white-color);
+      }
+    }
+  }
+}
+
+.hero-home {
+  background: url("../assets/home/background-home-desktop.jpg") no-repeat;
+
+  background-size: cover;
+  background-color: var(--bg-color);
+
+  .hero__main {
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(var(--container-padding), 1fr)
+      [content-start] minmax(0, 80rem)
+      [content-end] minmax(var(--container-padding), 1fr)
+      [full-end];
+
+    padding-block: 128px;
+
+    & > * {
+      grid-column: content;
+    }
+
+    .hero-text {
+      display: flex;
+
+      .hero-text__body {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .hero-text__subtitle {
+          font-size: 28px;
+          text-transform: uppercase;
+          letter-spacing: 4px;
+          color: #d0d6f9;
+          font-family: var(--font-barlowCondensed);
+        }
+        .hero-text__title {
+          color: var(--white-color);
+          text-transform: uppercase;
+          font-size: 144px;
+          font-weight: 100;
+        }
+        .hero-text__description {
+          font-size: 18px;
+          color: #d0d6f9;
+          font-family: var(--font-barlowCondensed);
+        }
+      }
+    }
+
+    .hero-text__action {
+      display: flex;
+      justify-content: end;
+      .explore-btn {
+        cursor: pointer;
+        width: 272px;
+        height: 272px;
+        background-color: var(--white-color);
+        border-radius: 50%;
+        font-size: 32px;
+        color: var(--blue-900);
+        border: none;
+        font-weight: 100;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
