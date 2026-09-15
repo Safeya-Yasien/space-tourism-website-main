@@ -9,7 +9,21 @@
   --header-padding-top: 40px;
 
   --font-barlowCondensed: "Barlow Condensed", sans-serif;
+  --font-barlow: "Barlow", sans-serif;
   --font-bellefair: "Bellefair", serif;
+}
+
+@media (max-width: 1400px) {
+  :root {
+    --container-padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 24px;
+    --header-padding-top: 24px;
+  }
 }
 
 @font-face {
@@ -37,6 +51,16 @@
   src:
     url("../assets/fonts/BarlowCondensed-Regular.woff2") format("woff2"),
     url("../assets/fonts/BarlowCondensed-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src:
+    url("../assets/fonts/Barlow-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Barlow-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

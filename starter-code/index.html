@@ -23,25 +23,67 @@
       <div class="hero">
         <header class="header flex-align-center">
           <div class="header__logo flex-align-center">
-            <img src="assets/shared/logo.svg" alt="Space tourism website" />
-            <div class="header__line"></div>
+            <a href="index.html" aria-label="Space tourism website - Home">
+              <img src="assets/shared/logo.svg" alt="" />
+            </a>
           </div>
 
-          <nav class="primary-nav">
+          <div class="header__line"></div>
+
+          <button
+            class="mobile-nav-toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <div class="mobile-nav__icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+
+          <nav class="primary-nav" data-visible="false">
+            <div class="mobile-nav__header">
+              <button class="mobile-nav__close" aria-label="Close menu">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
             <ul class="primary-nav__list flex-align-center">
               <li
                 class="primary-nav__item flex-align-center primary-nav__item--active"
               >
-                <span class="primary-nav__number">00</span> Home
+                <a href="index.html">
+                  <span class="primary-nav__number">00</span> Home
+                </a>
               </li>
               <li class="primary-nav__item flex-align-center">
-                <span class="primary-nav__number">01</span> Destination
+                <a href="destination.html">
+                  <span class="primary-nav__number">01</span> Destination
+                </a>
               </li>
               <li class="primary-nav__item flex-align-center">
-                <span class="primary-nav__number">02</span> Crew
+                <a href="crew.html">
+                  <span class="primary-nav__number">02</span> Crew
+                </a>
               </li>
               <li class="primary-nav__item flex-align-center">
-                <span class="primary-nav__number">03</span> Technology
+                <a href="technology.html">
+                  <span class="primary-nav__number">03</span> Technology
+                </a>
               </li>
             </ul>
           </nav>
@@ -61,7 +103,7 @@
             </div>
 
             <div class="hero-text__action flex-center">
-              <button class="explore-btn">Explore</button>
+              <a href="#about" class="explore-btn flex-center">Explore</a>
             </div>
           </div>
         </main>
