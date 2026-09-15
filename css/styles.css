@@ -172,6 +172,13 @@ header {
   background-color: var(--bg-color);
   height: 100dvh;
 
+  @media (max-width: 1440px) {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+  @media (max-width: 768px) {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+  }
+
   .hero__main {
     display: grid;
     grid-template-columns:
