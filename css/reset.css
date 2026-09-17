@@ -19,4 +19,5 @@ body {
   width: 100%;
   font-family: var(--font-bellefair);
   background-color: var(--bg-color);
+  color: var(--white-color)
 }

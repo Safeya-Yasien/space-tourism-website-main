@@ -12,3 +12,79 @@
 .container {
   padding-inline: var(--container-padding);
 }
+
+.page-hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--bg-color);
+  height: 100dvh;
+}
+
+.page-main {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--container-padding), 1fr)
+    [content-start] minmax(0, 80rem)
+    [content-end] minmax(var(--container-padding), 1fr)
+    [full-end];
+
+  & > * {
+    grid-column: content;
+  }
+
+  @media (max-width: 768px) {
+    padding-block: 24px;
+  }
+}
+
+.page-title {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: var(--font-barlowCondensed);
+}
+
+.page-hero--home {
+  background-image: url("../assets/home/background-home-desktop.jpg");
+
+  @media (max-width: 1440px) {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+  @media (max-width: 768px) {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+  }
+}
+
+.page-hero--destination {
+  background-image: url("../assets/destination/background-destination-desktop.jpg");
+
+  @media (max-width: 1440px) {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+  @media (max-width: 768px) {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+  }
+}
+
+.page-hero--crew {
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+
+  @media (max-width: 1440px) {
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  }
+  @media (max-width: 768px) {
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
+  }
+}
+
+.page-hero--technology {
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
+
+  @media (max-width: 1440px) {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
+  @media (max-width: 768px) {
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
+  }
+}

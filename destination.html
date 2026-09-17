@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/utlis.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <div class="page-hero page-hero--destination">
+      <header class="header flex-align-center">
+        <div class="header__logo flex-align-center">
+          <a href="index.html" aria-label="Space tourism website - Home">
+            <img src="assets/shared/logo.svg" alt="" />
+          </a>
+        </div>
+
+        <div class="header__line"></div>
+
+        <button
+          class="mobile-nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <div class="mobile-nav__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+
+        <nav class="primary-nav" data-visible="false">
+          <div class="mobile-nav__header">
+            <button class="mobile-nav__close" aria-label="Close menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 6L6 18M6 6L18 18"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <ul class="primary-nav__list flex-align-center">
+            <li class="primary-nav__item flex-align-center">
+              <a href="index.html">
+                <span class="primary-nav__number">00</span> Home
+              </a>
+            </li>
+            <li
+              class="primary-nav__item flex-align-center primary-nav__item--active"
+            >
+              <a href="destination.html">
+                <span class="primary-nav__number">01</span> Destination
+              </a>
+            </li>
+            <li class="primary-nav__item flex-align-center">
+              <a href="crew.html">
+                <span class="primary-nav__number">02</span> Crew
+              </a>
+            </li>
+            <li class="primary-nav__item flex-align-center">
+              <a href="technology.html">
+                <span class="primary-nav__number">03</span> Technology
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="page-main--destination container">
+        <h1 class="destination__title page-title flex-align-center">
+          <span class="destination__title-number">01</span> Pick your
+          destination
+        </h1>
+
+        <div class="page-grid">
+          <div class="destination__heading">
+            <div class="destination_image-wrapper">
+              <img
+                class="destination__image"
+                src="assets/destination/image-moon.webp"
+                alt="Moon"
+              />
+            </div>
+          </div>
+
+          <div class="destination__content-wrapper flex-center">
+            <div class="destination__content">
+              <ul class="destination__tabs flex-align-center">
+                <li class="destination__tab destination__tab--active">
+                  <a href="#moon">Moon</a>
+                </li>
+                <li class="destination__tab">
+                  <a href="#mars">Mars</a>
+                </li>
+                <li class="destination__tab">
+                  <a href="#europa">Europa</a>
+                </li>
+                <li class="destination__tab">
+                  <a href="#titan">Titan</a>
+                </li>
+              </ul>
+
+              <div class="destination__info">
+                <h2 class="destination__planet-name">Moon</h2>
+                <p class="destination__description">
+                  See our planet as you've never seen it before. A perfect
+                  relaxing trip away to help regain perspective and come back
+                  refreshed. While you're there, tiake in some history by
+                  visiting the Luna 2 and Apollo 11 landing sites.
+                </p>
+              </div>
+
+              <div class="destination__divider"></div>
+
+              <div class="destination__stats">
+                <div class="destination__stat">
+                  <h3 class="destination__stat-label">Avg. distance</h3>
+                  <p class="destination__stat-value">384,400 km</p>
+                </div>
+                <div class="destination__stat">
+                  <h3 class="destination__stat-label">Est. travel time</h3>
+                  <p class="destination__stat-value">3 days</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
