@@ -19,7 +19,7 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body>
-    <div class="page-hero page-hero--destination">
+    <div class="page-hero page-hero--crew">
       <header class="header flex-align-center">
         <div class="header__logo flex-align-center">
           <a href="index.html" aria-label="Space tourism website - Home">
@@ -67,14 +67,14 @@
                 <span class="primary-nav__number">00</span> Home
               </a>
             </li>
-            <li
-              class="primary-nav__item flex-align-center primary-nav__item--active"
-            >
+            <li class="primary-nav__item flex-align-center">
               <a href="destination.html">
                 <span class="primary-nav__number">01</span> Destination
               </a>
             </li>
-            <li class="primary-nav__item flex-align-center">
+            <li
+              class="primary-nav__item flex-align-center primary-nav__item--active"
+            >
               <a href="crew.html">
                 <span class="primary-nav__number">02</span> Crew
               </a>
@@ -88,61 +88,47 @@
         </nav>
       </header>
 
-      <main class="page-main--destination container">
-        <h1 class="destination__title page-title flex-align-center">
-          <span class="page__title-number">01</span> Pick your destination
+      <main class="page-main--crew container">
+        <h1 class="crew__title page-title flex-align-center">
+          <span class="page__title-number">02</span> MEET YOUR CREW
         </h1>
 
         <div class="page-grid">
-          <div class="destination__heading">
-            <div class="destination_image-wrapper">
-              <img
-                class="destination__image"
-                src="assets/destination/image-moon.webp"
-                alt="Moon"
-              />
+          <div class="crew__content-wrapper">
+            <div class="crew__content">
+              <div class="crew__info">
+                <div class="crew__member">
+                  <div class="crew__member-heading">
+                    <p class="crew__subtitle">Commander</p>
+                    <h2 class="crew__crew-name">Douglas Hurley</h2>
+                  </div>
+
+                  <p class="crew__description">
+                    Douglas Gerald Hurley is an American engineer, former Marine
+                    Corps pilot and former NASA astronaut. He launched into
+                    space for the third time as commander of Crew Dragon Demo-2.
+                  </p>
+                </div>
+
+                <div class="crew__bullets">
+                  <ul class="crew__bullets-list">
+                    <li class="crew__bullet crew__bullet--active"></li>
+                    <li class="crew__bullet"></li>
+                    <li class="crew__bullet"></li>
+                    <li class="crew__bullet"></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="destination__content-wrapper flex-center">
-            <div class="destination__content">
-              <ul class="destination__tabs flex-align-center">
-                <li class="destination__tab destination__tab--active">
-                  <a href="#moon">Moon</a>
-                </li>
-                <li class="destination__tab">
-                  <a href="#mars">Mars</a>
-                </li>
-                <li class="destination__tab">
-                  <a href="#europa">Europa</a>
-                </li>
-                <li class="destination__tab">
-                  <a href="#titan">Titan</a>
-                </li>
-              </ul>
-
-              <div class="destination__info">
-                <h2 class="destination__planet-name">Moon</h2>
-                <p class="destination__description">
-                  See our planet as you've never seen it before. A perfect
-                  relaxing trip away to help regain perspective and come back
-                  refreshed. While you're there, tiake in some history by
-                  visiting the Luna 2 and Apollo 11 landing sites.
-                </p>
-              </div>
-
-              <div class="destination__divider"></div>
-
-              <div class="destination__stats">
-                <div class="destination__stat">
-                  <h3 class="destination__stat-label">Avg. distance</h3>
-                  <p class="destination__stat-value">384,400 km</p>
-                </div>
-                <div class="destination__stat">
-                  <h3 class="destination__stat-label">Est. travel time</h3>
-                  <p class="destination__stat-value">3 days</p>
-                </div>
-              </div>
+          <div class="crew__heading">
+            <div class="crew_image-wrapper">
+              <img
+                class="crew__image"
+                src="assets/crew/image-douglas-hurley.webp"
+                alt="Hurley"
+              />
             </div>
           </div>
         </div>
