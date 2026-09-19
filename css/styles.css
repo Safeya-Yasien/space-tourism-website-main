@@ -304,21 +304,6 @@ header {
           padding-block: 26px;
           padding-inline: 0;
         }
-
-        .destination__image {
-          width: 100%;
-          max-width: 480px;
-          height: auto;
-          display: block;
-
-          @media (max-width: 1440px) {
-            max-width: 300px;
-          }
-
-          @media (max-width: 768px) {
-            max-width: 150px;
-          }
-        }
       }
     }
 
@@ -440,15 +425,41 @@ header {
   }
 }
 
+.destination__image,
+.crew__image {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+
+  @media (max-width: 1440px) {
+    max-width: 300px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 150px;
+  }
+}
+
 .crew__info {
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media (max-width: 1440px) {
+    gap: 24px;
+    align-items: center;
+  }
   .crew__member {
     gap: 24px;
     display: flex;
     flex-direction: column;
     padding-block: 197px;
+    @media (max-width: 1440px) {
+      padding-block: 64px;
+      align-items: center;
+      padding-bottom: 40px;
+    }
   }
   .crew__member-heading {
     display: flex;
@@ -458,11 +469,23 @@ header {
       font-size: 32px;
       text-transform: uppercase;
       opacity: 50%;
+      @media (max-width: 1440px) {
+        font-size: 24px;
+      }
+    }
+    @media (max-width: 768px) {
+      gap: 8px;
     }
     .crew__crew-name {
       font-weight: 100;
       font-size: 56px;
       text-transform: uppercase;
+      @media (max-width: 1440px) {
+        font-size: 40px;
+      }
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
     }
   }
   .crew__description {
@@ -471,6 +494,13 @@ header {
     color: var(--blue-300);
     max-width: 540px;
     font-family: var(--font-barlow);
+    @media (max-width: 1440px) {
+      font-size: 16px;
+      max-width: 512px;
+    }
+    @media (max-width: 768px) {
+      max-width: none;
+    }
   }
 }
 .crew__bullets {
@@ -484,9 +514,21 @@ header {
       height: 14px;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 17.44%);
+      @media (max-width: 1440px) {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    @media (max-width: 1440px) {
+      gap: 16px;
     }
     .crew__bullet--active {
       background-color: var(--white-color);
     }
   }
+}
+
+.crew_image-wrapper {
+  display: flex;
+  justify-content: center;
 }
