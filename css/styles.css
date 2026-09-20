@@ -174,6 +174,12 @@ header {
   .page-main--home {
     padding-block: 128px;
 
+    @media (max-width: 1440px) {
+      gap: 48px;
+    }
+    @media (max-width: 768px) {
+      padding-block: 24px;
+    }
     .hero-text__body {
       display: flex;
       flex-direction: column;
@@ -220,6 +226,14 @@ header {
     .hero-text__action {
       display: flex;
       justify-content: end;
+
+      @media (max-width: 1440px) {
+        justify-content: center;
+      }
+      @media (max-width: 768px) {
+        padding-block: 119px;
+      }
+
       .explore-btn {
         width: 272px;
         height: 272px;
@@ -389,6 +403,9 @@ header {
 
         @media (max-width: 1440px) {
           justify-content: space-around;
+        }
+        @media (max-width: 768px) {
+          flex-direction: column;
         }
 
         .destination__stat {
