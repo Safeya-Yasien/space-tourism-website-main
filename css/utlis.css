@@ -23,17 +23,10 @@
 
 .page-main {
   display: grid;
-  grid-template-columns:
-    [full-start] minmax(var(--container-padding), 1fr)
-    [content-start] minmax(0, 80rem)
-    [content-end] minmax(var(--container-padding), 1fr)
-    [full-end];
-
-  & > * {
-    grid-column: content;
-  }
+  grid-template-columns: 1fr 1fr;
 
   @media (max-width: 768px) {
+    grid-template-columns: 1fr;
     padding-block: 24px;
   }
 }
