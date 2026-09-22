@@ -479,7 +479,7 @@ header {
   }
 }
 
-.crew__subtitle,
+.crew__role,
 .technology__subtitle {
   font-size: 32px;
   text-transform: uppercase;
@@ -488,7 +488,7 @@ header {
     font-size: 24px;
   }
 }
-.crew__crew-name,
+.crew__name,
 .technology__technology-name {
   font-weight: 100;
   font-size: 56px;
@@ -500,7 +500,7 @@ header {
     font-size: 24px;
   }
 }
-.crew__description,
+.crew__bio,
 .technology__description {
   font-size: 18px;
   line-height: 180%;
@@ -522,6 +522,8 @@ header {
     align-items: center;
     gap: 40px;
     .crew__bullet {
+      border: 0;
+      padding: 0;
       cursor: pointer;
       width: 14px;
       height: 14px;

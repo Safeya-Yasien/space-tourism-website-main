@@ -99,23 +99,51 @@
               <div class="crew__info">
                 <div class="crew__member">
                   <div class="crew__member-heading">
-                    <p class="crew__subtitle">Commander</p>
-                    <h2 class="crew__crew-name">Douglas Hurley</h2>
+                    <p class="crew__role">Commander</p>
+                    <h2 class="crew__name">Douglas Hurley</h2>
                   </div>
 
-                  <p class="crew__description">
+                  <p class="crew__bio">
                     Douglas Gerald Hurley is an American engineer, former Marine
                     Corps pilot and former NASA astronaut. He launched into
                     space for the third time as commander of Crew Dragon Demo-2.
                   </p>
                 </div>
 
-                <div class="crew__bullets">
+                <div class="crew__bullets" data-crew-controls>
                   <ul class="crew__bullets-list">
-                    <li class="crew__bullet crew__bullet--active"></li>
-                    <li class="crew__bullet"></li>
-                    <li class="crew__bullet"></li>
-                    <li class="crew__bullet"></li>
+                    <li>
+                      <button
+                        class="crew__bullet crew__bullet--active"
+                        type="button"
+                        aria-label="Show Douglas Hurley"
+                        data-crew-index="0"
+                      ></button>
+                    </li>
+                    <li>
+                      <button
+                        class="crew__bullet"
+                        type="button"
+                        aria-label="Show Mark Shuttleworth"
+                        data-crew-index="1"
+                      ></button>
+                    </li>
+                    <li>
+                      <button
+                        class="crew__bullet"
+                        type="button"
+                        aria-label="Show Victor Glover"
+                        data-crew-index="2"
+                      ></button>
+                    </li>
+                    <li>
+                      <button
+                        class="crew__bullet"
+                        type="button"
+                        aria-label="Show Anousheh Ansari"
+                        data-crew-index="3"
+                      ></button>
+                    </li>
                   </ul>
                 </div>
               </div>
