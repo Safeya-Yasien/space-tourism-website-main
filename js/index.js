@@ -62,7 +62,7 @@ if (tabsControls) {
 
   const tabControl = document.querySelectorAll("[data-tab-index]");
 
-  fetch("/data.json")
+  fetch("data.json")
     .then((res) => res.json())
     .then(({ destinations }) => {
       tabControl.forEach((tab) => {
