@@ -44,3 +44,43 @@ if (crewControls) {
       });
     });
 }
+
+const tabsControls = document.querySelector("[data-destination-tabs-controls]");
+
+if (tabsControls) {
+  const destinationName = document.querySelector(".destination__planet-name");
+  const destinationDescription = document.querySelector(
+    ".destination__description",
+  );
+  const destinationStatLabel = document.querySelector(
+    ".destination__stat-label",
+  );
+  const destinationStatValue = document.querySelector(
+    ".destination__stat-value",
+  );
+  const destinationImage = document.querySelector(".destination__image");
+
+  const tabControl = document.querySelectorAll("[data-tab-index]");
+
+  fetch("/data.json")
+    .then((res) => res.json())
+    .then(({ destinations }) => {
+      tabControl.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const index = Number(tab.dataset.tabIndex);
+          const destination = destinations[index];
+
+          destinationName.textContent = destination.name;
+          destinationDescription.textContent = destination.description;
+          destinationStatLabel.textContent = destination.travel;
+          destinationStatValue.textContent = destination.distance;
+          destinationImage.src = destination.images.webp;
+
+          tabControl.forEach((destination) => {
+            destination.classList.remove("destination__tab--active");
+          });
+          tab.classList.add("destination__tab--active");
+        });
+      });
+    });
+}
