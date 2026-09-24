@@ -84,3 +84,39 @@ if (tabsControls) {
       });
     });
 }
+
+const technologyBulletsControls = document.querySelector(
+  "[data-tech-bullets-controls]",
+);
+
+if (technologyBulletsControls) {
+  const technologyName = document.querySelector(".technology__technology-name");
+  const technologyDescription = document.querySelector(
+    ".technology__description",
+  );
+  const technologyImage = document.querySelector(".technology__image");
+
+  const technologyBullet = document.querySelectorAll(
+    "[data-tech-bullet-index]",
+  );
+
+  fetch("data.json")
+    .then((res) => res.json())
+    .then(({ technology }) => {
+      technologyBullet.forEach((bullet) => {
+        bullet.addEventListener("click", () => {
+          const index = Number(bullet.dataset.techBulletIndex);
+          const tech = technology[index];
+
+          technologyName.textContent = tech.name;
+          technologyDescription.textContent = tech.description;
+          technologyImage.src = tech.images.landscape;
+
+          technologyBullet.forEach((btn) => {
+            btn.classList.remove("technology__bullet--active");
+          });
+          bullet.classList.add("technology__bullet--active");
+        });
+      });
+    });
+}
