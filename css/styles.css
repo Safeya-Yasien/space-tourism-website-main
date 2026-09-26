@@ -244,6 +244,26 @@ header {
         border: none;
         font-weight: 100;
         text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          background-color: rgb(255, 255, 255, 15%);
+          border-radius: 50%;
+          transition:
+            opacity 500ms linear,
+            transform 750ms ease-in-out;
+          opacity: 0;
+        }
+        &:hover::before {
+          opacity: 1;
+          transform: scale(1.5);
+        }
+
         @media (max-width: 768px) {
           width: 144px;
           height: 144px;
