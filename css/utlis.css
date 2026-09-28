@@ -24,7 +24,7 @@
 .page-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     grid-template-columns: 1fr;
   }
 
