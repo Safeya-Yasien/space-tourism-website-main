@@ -35,16 +35,18 @@ if (crewControls) {
           crewName.textContent = member.name;
           crewBio.textContent = member.bio;
           crewImage.src = member.images.webp;
+          crewImage.alt = member.name;
 
           crewControls.forEach((btn) => {
-            btn.classList.remove("crew__bullet--active");
+            btn.classList.toggle("crew__bullet--active", btn === bullet);
+            btn.setAttribute("aria-pressed", btn === bullet);
           });
-          bullet.classList.add("crew__bullet--active");
         });
       });
     });
 }
 
+// destination
 const tabsControls = document.querySelector("[data-destination-tabs-controls]");
 
 if (tabsControls) {
@@ -52,12 +54,11 @@ if (tabsControls) {
   const destinationDescription = document.querySelector(
     ".destination__description",
   );
-  const destinationStatLabel = document.querySelector(
-    ".destination__stat-label",
-  );
-  const destinationStatValue = document.querySelector(
+
+  const [distanceValue, travelValue] = document.querySelectorAll(
     ".destination__stat-value",
   );
+
   const destinationImage = document.querySelector(".destination__image");
 
   const tabControl = document.querySelectorAll("[data-tab-index]");
@@ -72,19 +73,24 @@ if (tabsControls) {
 
           destinationName.textContent = destination.name;
           destinationDescription.textContent = destination.description;
-          destinationStatLabel.textContent = destination.travel;
-          destinationStatValue.textContent = destination.distance;
+          distanceValue.textContent = destination.distance;
+          travelValue.textContent = destination.travel;
           destinationImage.src = destination.images.webp;
+          destinationImage.alt = destination.name;
 
           tabControl.forEach((destination) => {
-            destination.classList.remove("destination__tab--active");
+            destination.classList.toggle(
+              "destination__tab--active",
+              destination === tab,
+            );
+            destination.setAttribute("aria-pressed", destination === tab);
           });
-          tab.classList.add("destination__tab--active");
         });
       });
     });
 }
 
+// technology
 const technologyBulletsControls = document.querySelector(
   "[data-tech-bullets-controls]",
 );
@@ -103,7 +109,8 @@ if (technologyBulletsControls) {
   fetch("data.json")
     .then((res) => res.json())
     .then(({ technology }) => {
-      technologyBullet.forEach((bullet) => {
+      technologyBullet.forEach((bullet, index) => {
+        bullet.setAttribute("aria-label", technology[index].name);
         bullet.addEventListener("click", () => {
           const index = Number(bullet.dataset.techBulletIndex);
           const tech = technology[index];
@@ -111,11 +118,12 @@ if (technologyBulletsControls) {
           technologyName.textContent = tech.name;
           technologyDescription.textContent = tech.description;
           technologyImage.src = tech.images.landscape;
+          technologyImage.alt = tech.name;
 
           technologyBullet.forEach((btn) => {
-            btn.classList.remove("technology__bullet--active");
+            btn.classList.toggle("technology__bullet--active", btn === bullet);
+            btn.setAttribute("aria-pressed", btn === bullet);
           });
-          bullet.classList.add("technology__bullet--active");
         });
       });
     });

@@ -15,9 +15,9 @@ a {
 }
 
 body {
-  height: 100dvh;
+  min-height: 100dvh;
   width: 100%;
   font-family: var(--font-bellefair);
   background-color: var(--bg-color);
-  color: var(--white-color)
+  color: var(--white-color);
 }
